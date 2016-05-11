@@ -1,0 +1,20 @@
+{
+  "name": "gdg-gae-presentation",
+  "description": "endpoints-skeleton ==================",
+  "main": "src/main/webapp/index.html",
+  "authors": [
+    "kiddynamo <njenan@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://gdg-gae-presentation.appspot.com/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
