@@ -11,11 +11,13 @@
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="app.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init">
+    </script>
 </head>
 <body ng-app="gdg-gae-presentation">
 <div class="container" ng-controller="controller">
-    <h1>{{text}}</h1>
-    <table class="table">
+    <button class="btn" ng-hide="loaded" ng-click="login()">Login</button>
+    <table ng-show="loaded" class="table">
         <tr>
             <th><input placeholder="Name" ng-model="name"/></th>
             <th><input placeholder="Age" ng-model="age"/></th>
