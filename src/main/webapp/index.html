@@ -15,18 +15,21 @@
 <body ng-app="gdg-gae-presentation">
 <div class="container" ng-controller="controller">
     <h1>{{text}}</h1>
-    <div>
-        <div class="input-group">
-            <span class="input-group-addon">Name</span><input class="form-control"/>
-        </div>
-        <div class="input-group">
-            <span class="input-group-addon">Age</span><input class="form-control"/>
-        </div>
-        <div class="input-group">
-            <span class="input-group-addon">Job</span><input class="form-control"/>
-        </div>
-        <button class="btn">Submit</button>
-    </div>
+    <table class="table">
+        <tr>
+            <th><input placeholder="Name" ng-model="name"/></th>
+            <th><input placeholder="Age" ng-model="age"/></th>
+            <th><input placeholder="Job" ng-model="job"/></th>
+            <th>
+                <button class="btn" ng-click="add(name, age, job)">Add</button>
+            </th>
+        </tr>
+        <tr ng-repeat="employee in employees">
+            <td>{{employee.name}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.job}}</td>
+        </tr>
+    </table>
 </div>
 </body>
 </html>

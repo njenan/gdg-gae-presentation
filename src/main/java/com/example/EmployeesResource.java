@@ -14,15 +14,15 @@ import java.util.List;
         name = "jobs",
         version = "v1"
 )
-public class JobsResource {
+public class EmployeesResource {
     private List<Employee> employees = new ArrayList<>();
 
-    @ApiMethod(httpMethod = ApiMethod.HttpMethod.GET, name = "getJobs", path = "jobs")
+    @ApiMethod(httpMethod = ApiMethod.HttpMethod.GET, name = "getJobs", path = "employees")
     public List<Employee> getEmployees() {
         return employees;
     }
 
-    @ApiMethod(httpMethod = ApiMethod.HttpMethod.POST, name = "createJob", path = "jobs")
+    @ApiMethod(httpMethod = ApiMethod.HttpMethod.POST, name = "createJob", path = "employees")
     public Employee createEmployee(Employee employee) {
         employees.add(employee);
         return employee;
